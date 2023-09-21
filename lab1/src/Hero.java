@@ -3,7 +3,7 @@ public class Hero {
     public Hero() {} //constructor
 
     int destination = 0; //destination
-    Movement movement; //strategy
+    Movement movement = new Walk(); //strategy
 
 
     //setter for moving strategy
@@ -14,6 +14,7 @@ public class Hero {
     public void moving(){
         movement.move();
         this.changeDestination();
+        System.out.print(destination+"\n");
     }
 
     private void changeDestination() {
