@@ -11,13 +11,12 @@ public class Main {
                 method.setAccessible(true); //устанавливаем флаг доступа к методу
                 for (int i = 0; i < repeatCount; i++) { //проходимся по циклу в соответствии с полученным значением аннотации
                     try {
-                        method.invoke(obj); //вызываем метод
+                        method.invoke(obj, i); //вызываем метод
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
             }
-
         }
     }
 }
