@@ -13,7 +13,10 @@ public class Hero {
 
     public void moving(){
         movement.move();
+        this.changeDestination();
     }
 
-    //TODO destination?
+    private void changeDestination() {
+        destination = (destination + 1) % 2;
+    }
 }
